@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #dad7d5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background: #c4bab0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 1.3rem;
+    }
+    .navbar-brand img {
+      border-radius: 50%;
+      margin-right: 8px;
+      border: 2px solid #eee;
+    }
+    .nav-link {
+      color: #222 !important;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+    .nav-link.active, .nav-link:hover {
+      color: #637da3 !important;
+    }
+    /* Hero Section */
+    .hero-section {
+      padding: 70px 0 40px 0;
+      min-height: 60vh;
+      background: #fff;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: #222;
+      margin-bottom: 16px;
+    }
+    .hero-buttons .btn {
+      border: 2px solid #222;
+      background: transparent;
+      color: #222;
+      font-weight: 500;
+      border-radius: 10px;
+      margin-right: 10px;
+      transition: all .2s;
+    }
+    .hero-buttons .btn:hover {
+      background: #222;
+      color: #fff;
+    }
+    .profile-img {
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+      max-width: 350px;
+      width: 100%;
+      object-fit: cover;
+    }
+    /* WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      z-index: 999;
+      font-size: 2rem;
+      transition: box-shadow .2s;
+    }
+    .whatsapp-button:hover {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+      color: #fff;
+      text-decoration: none;
+    }
+    /* About Section */
+    .about-section {
+      padding: 70px 0 40px 0;
+      background: #faf9f8;
+    }
+    .about-title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .about-img {
+      border: 5px solid #111;
+      border-radius: 50%;
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.13);
+      margin-bottom: 18px;
+    }
+    .about-description {
+      font-size: 1.08rem;
+      color: #444;
+      margin-bottom: 22px;
+      line-height: 1.7;
+    }
+    .skill-tag {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      margin: 5px 7px 5px 0;
+      display: inline-block;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .about-buttons .btn {
+      border: 2px solid #222;
+      background: transparent;
+      color: #222;
+      font-weight: 500;
+      border-radius: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+      transition: all .2s;
+    }
+    .about-buttons .btn:hover {
+      background: #222;
+      color: #fff;
+    }
+    @media (max-width: 991px) {
+      .hero-section .row, .about-section .row {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .profile-img, .about-img {
+        margin: 0 auto 20px auto;
+      }
+      .about-title {
+        margin-top: 20px;
+      }
+    }
+
+   /* contact */
+        
+    body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  display: flex;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1100px;
+}
+
+.contact-form {
+  flex: 1;
+  background: #fff;
+  padding: 40px 30px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form .social-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-form .social-icons a {
+  margin: 0 10px;
+  color: orange;
+  font-size: 24px;
+}
+
+.contact-image {
+  flex: 1;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-socials a {
+  color: orange;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #fff;
+}
+
+
+
+    
+    
+
+    
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logoam.jpg" alt="logo" height="40">
+        <span style="color:#5c4f4f;">Asma <span style="color:#292f35;">Masood</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left: Text -->
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="hero-title mb-2">WELCOME TO MY PORTFOLIO</div>
+          <div class="hero-subtitle mb-2">I am a <span class="fw-bold">Front & Backend Developer</span></div>
+          <div class="hero-desc mb-2">
+            <p>Hi! <span>I'm Asma Masood</span>, a front-end developer skilled in HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap.</p>
+          <p>With a passion for creating user-friendly web experiences.</p>
+          </div>
+          <div class="hero-buttons mt-3">
+            <a href="#" class="btn">See My Work</a>
+            <a href="#" class="btn">Hire Me</a>
+            <a href="#" class="btn">Download CV</a>
+          </div>
+        </div>
+        <!-- Right: Image -->
+        <div class="col-lg-6 text-center">
+          <img src="web.jpg" alt="A." class="profile-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/923001234567" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left: Image -->
+        <div class="col-md-5 text-center">
+          <img src="about.png" alt="" class="about-img">
+        </div>
+        <!-- Right: Content -->
+        <div class="col-md-7">
+          <div class="about-title">About Me</div>
+          <div class="about-description">
+            I'm a passionate developer with expertise in HTML, CSS, JavaScript, React, Tailwind CSS, Node.js, AI, and advanced animation techniques using GSAP. I specialize in building responsive, interactive, and scalable web applications. From designing elegant layouts to integrating powerful APIs, I bring creativity and a sharp attention to detail into every project. My machine learning skills add an innovative edge to my work, enabling cutting-edge solutions.
+          </div>
+          <!-- Skills -->
+          <div class="mb-3">
+            <span class="skill-tag">HTML5 &amp; CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">Next js</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">MongoDB</span>
+        
+           
+          </div>
+          <!-- Buttons -->
+          <div class="about-buttons">
+            <a href="#" class="btn">Download Resume</a>
+            <a href="#" class="btn">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- my project -->
+   <app-projects _ngcontent-ng-c43263263251454 _nghost-ng-c4232638800>
+  <style _ngcontent-ng-c43263263251454>
+    :host {
+      display: block;
+      --columns: 3;
+       --card-gap: 1.5rem;
+       --card-min-width: 280px;
+    }
+
+    .projects-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .projects-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .projects-header h2 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .projects-header p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--gap-size);
+    }
+
+    .project {
+      perspective: 1000px; /* Enables 3D space for the flip effect */
+    }
+
+    .project-card {
+      width: 100%;
+      height: 300px; /* Fixed height for the card */
+      position: relative;
+      transform-style: preserve-3d; /* Enables 3D transformations */
+      transition: transform 0.6s;
+    }
+
+    .project:hover .project-card {
+      transform: rotateY(180deg); /* Flips the card on hover */
+    }
+
+    .project-front,
+    .project-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden; /* Hides the back side when facing away */
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-front {
+      background: white;
+    }
+
+    .project-back {
+      background: #2c3e50; /* Dark background for the back */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotateY(180deg); /* Initially hide the back */
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .project-info h3 {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 1.25rem;
+    }
+  </style>
+
+  <section _ngcontent-ng-c43263263251454 class="projects-container">
+    <div _ngcontent-ng-c43263263251454 class="projects-header">
+      <h2 _ngcontent-ng-c43263263251454>Our Projects</h2>
+      <p _ngcontent-ng-c43263263251454>Explore our latest work and portfolio</p>
+    </div>
+    
+    <div _ngcontent-ng-c43263263251454 class="projects-grid">
+      
+      <!-- Project Card 1 -->
+      <div _ngcontent-ng-c43263263251454 class="project" data-aos="fade-up">
+        <div _ngcontent-ng-c43263263251454 class="project-card">
+          <div _ngcontent-ng-c43263263251454 class="project-front">
+            <img _ngcontent-ng-c43263263251454 src="pro1.jpg" alt="Project 1">
+            <div _ngcontent-ng-c43263263251454 class="project-info">
+              <h3 _ngcontent-ng-c43263263251454>Project 1</h3>
+            </div>
+          </div>
+          <div _ngcontent-ng-c43263263251454 class="project-back">
+            <h3 _ngcontent-ng-c43263263251454>A website build with html and css</h3>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project Card 2 -->
+      <div _ngcontent-ng-c43263263251454 class="project" data-aos="fade-up">
+        <div _ngcontent-ng-c43263263251454 class="project-card">
+          <div _ngcontent-ng-c43263263251454 class="project-front">
+            <img _ngcontent-ng-c43263263251454 src="pro2.jpg" alt="Project 2">
+            <div _ngcontent-ng-c43263263251454 class="project-info">
+              <h3 _ngcontent-ng-c43263263251454></h3>
+            </div>
+          </div>
+          <div _ngcontent-ng-c43263263251454 class="project-back">
+            <h3 _ngcontent-ng-c43263263251454>A website built with laravel php</h3>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project Card 3 -->
+      <div _ngcontent-ng-c43263263251454 class="project" data-aos="fade-up">
+        <div _ngcontent-ng-c43263263251454 class="project-card">
+          <div _ngcontent-ng-c43263263251454 class="project-front">
+            <img _ngcontent-ng-c43263263251454 src="pro3.jpg" alt="Project 3">
+            <div _ngcontent-ng-c43263263251454 class="project-info">
+              <h3 _ngcontent-ng-c43263263251454>Project 3</h3>
+            </div>
+          </div>
+          <div _ngcontent-ng-c43263263251454 class="project-back">
+            <h3 _ngcontent-ng-c43263263251454>A website built with html, css and bootstap</h3>
+          </div>
+        </div>
+      </div>
+
+     
+  </section>
+</app-projects>
+
+<!-- Services -->
+<app-services _ngcontent-ng-c3263251454 _nghost-ng-c3786193986>
+  <style _ngcontent-ng-c3786193986>
+    :host {
+      display: block;
+      background-color: #f9fafb;
+      padding: 4rem 0;
+    }
+
+    .Services-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #1a365d;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .heading::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #3182ce;
+      margin: 1rem auto;
+    }
+
+    .Services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);  /* 3 columns by default */
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-icon {
+      background: #3182ce;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-icon svg {
+      width: 60px;
+      height: 60px;
+      color: white;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: #1a365d;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .card-description {
+      color: #4a5568;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-button {
+      background: #3182ce;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 500;
+      transition: background 0.2s ease;
+      margin-top: auto;
+    }
+
+    .card-button:hover {
+      background: #2c5282;
+    }
+
+    @media (max-width: 1024px) {
+      .Services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .Services-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+      }
+      
+      .heading {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <div _ngcontent-ng-c3786193986 class="Services-container">
+    <h1 _ngcontent-ng-c3786193986 class="heading">Our Services</h1> 
+    <div _ngcontent-ng-c3786193986 class="Services-grid">
+      <!-- Service 1 -->
+      <div _ngcontent-ng-c3786193986 class="card">
+        <div _ngcontent-ng-c3786193986 class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div _ngcontent-ng-c3786193986 class="card-content">
+          <h3 _ngcontent-ng-c3786193986 class="card-title">Web Development</h3>
+          <p _ngcontent-ng-c3786193986 class="card-description">
+            Custom web applications built with modern technologies.
+          </p>
+          <a _ngcontent-ng-c3786193986 href="#" class="card-button">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div _ngcontent-ng-c3786193986 class="card">
+        <div _ngcontent-ng-c3786193986 class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
+        <div _ngcontent-ng-c3786193986 class="card-content">
+          <h3 _ngcontent-ng-c3786193986 class="card-title">Mobile App Development</h3>
+          <p _ngcontent-ng-c3786193986 class="card-description">
+            Native and cross-platform mobile applications.
+          </p>
+          <a _ngcontent-ng-c3786193986 href="#" class="card-button">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div _ngcontent-ng-c3786193986 class="card">
+        <div _ngcontent-ng-c3786193986 class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div _ngcontent-ng-c3786193986 class="card-content">
+          <h3 _ngcontent-ng-c3786193986 class="card-title">UI/UX Design</h3>
+          <p _ngcontent-ng-c3786193986 class="card-description">
+            Beautiful, intuitive user interfaces.
+          </p>
+          <a _ngcontent-ng-c3786193986 href="#" class="card-button">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div _ngcontent-ng-c3786193986 class="card">
+        <div _ngcontent-ng-c3786193986 class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <div _ngcontent-ng-c3786193986 class="card-content">
+          <h3 _ngcontent-ng-c3786193986 class="card-title">API Development</h3>
+          <p _ngcontent-ng-c3786193986 class="card-description">
+            Robust REST APIs and backend services.
+          </p>
+          <a _ngcontent-ng-c3786193986 href="#" class="card-button">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div _ngcontent-ng-c3786193986 class="card">
+        <div _ngcontent-ng-c3786193986 class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          </svg>
+        </div>
+        <div _ngcontent-ng-c3786193986 class="card-content">
+          <h3 _ngcontent-ng-c3786193986 class="card-title">Cloud Solutions</h3>
+          <p _ngcontent-ng-c3786193986 class="card-description">
+            Scalable cloud architecture implementation.
+          </p>
+          <a _ngcontent-ng-c3786193986 href="#" class="card-button">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div _ngcontent-ng-c3786193986 class="card">
+        <div _ngcontent-ng-c3786193986 class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <div _ngcontent-ng-c3786193986 class="card-content">
+          <h3 _ngcontent-ng-c3786193986 class="card-title">Security Services</h3>
+          <p _ngcontent-ng-c3786193986 class="card-description">
+            Comprehensive security auditing.
+          </p>
+          <a _ngcontent-ng-c3786193986 href="#" class="card-button">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-services>
+
+<!-- contact -->
+ 
+<div class="contact-container">
+  <div class="contact-box">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="contact-image">
+      <img src="contact.png" alt="Team" />
+    </div>
+  </div>
+  
+</div>
+
+<!-- footer -->
+
+<footer class="footer">
+  <div class="footer-container">
+    <h1>My Portfolio</h1>
+    <br>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+
+ 
+  <!-- Bootstrap JS (for navbar toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
